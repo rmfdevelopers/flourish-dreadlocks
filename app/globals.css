@@ -2,23 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --primary: #A7C957;
-    --secondary: #F4E285;
-    --accent: #386641;
-  }
+:root {
+  --primary: #4CBB17;
+  --secondary: #FFEF00;
+  --accent: #1A1A1A;
 }
 
-html { scroll-behavior: smooth; }
-body { 
-  overflow-x: hidden; 
-  font-family: var(--font-body); 
-  background: #050801; 
-  color: white; 
+html {
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 { font-family: var(--font-heading); }
+body {
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  background: var(--accent);
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
@@ -32,11 +35,11 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-slide-left { animation: slide-left 40s linear infinite; }
 
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-.text-gradient {
-  background: linear-gradient(to bottom right, #F4E285, #A7C957);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
 }
